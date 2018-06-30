@@ -18,10 +18,14 @@ function reverse(str) {
 
 /*** Third Solution ***/
 function reverse(str) {
-  let reversed = '';
-  for(let char of str) { reversed = char + reversed }
-  return reversed;
+    let reversed = '';
+    for(let char of str) { reversed = char + reversed }
+    return reversed;
 }
 
+/*** Fourth Solution ***/
+function reverse(str) {
+    return [...str].reduce((reversed, char) => char + reversed);
+}
 
 reverse('apple');
