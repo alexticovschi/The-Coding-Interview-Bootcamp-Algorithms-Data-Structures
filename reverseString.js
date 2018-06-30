@@ -16,4 +16,12 @@ function reverse(str) {
     return reversed.join('');
 }
 
+/*** Third Solution ***/
+function reverse(str) {
+  let reversed = '';
+  for(let char of str) { reversed = char + reversed }
+  return reversed;
+}
+
+
 reverse('apple');
