@@ -6,7 +6,14 @@
 
 /*** First Solution ***/
 function reverse(str) {
-  return str.split('').reverse().join('');
+    return str.split('').reverse().join('');
+}
+
+/*** Second Solution ***/
+function reverse(str) {
+    let reversed = [];
+    [...str].forEach(letter => reversed.unshift(letter));
+    return reversed.join('');
 }
 
 reverse('apple');
