@@ -12,3 +12,8 @@ const palindrome = (str) => {
     }
     return str === reverse;
 }
+
+/*** Second Solution ***/ 
+const palindrome = (str) => {
+    return [...str].reverse().join('') === str;
+}
