@@ -14,6 +14,14 @@ const palindrome = (str) => {
 }
 
 /*** Second Solution ***/ 
+const palindrome = (str) => [...str].reverse().join('') === str;
+
+/*** Third Solution ***/ 
 const palindrome = (str) => {
-    return [...str].reverse().join('') === str;
+    // remove all space from string and turn every letter to lower case
+    let newstr = str.replace(/ /g,'').toLowerCase();
+    let arr = [...newstr];
+    return arr.every(char => char === arr.pop());
 }
+
+palindrome('A Santa dog lived as a devil God at NASA');
