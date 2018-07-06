@@ -17,4 +17,11 @@ const reverseInt = (int) => {
 }
 
 
-reverseInt(981);
+/*** Second Solution ***/ 
+const reverseInt = (int) => {
+    let reversed = int.toString().split('').reverse().join('');
+    return Number(int < 0 ? reversed = '-' + reversed.slice(0, -1) : reversed);
+}
+
+
+reverseInt(-90);
