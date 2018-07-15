@@ -24,4 +24,12 @@ const reverseInt = (int) => {
 }
 
 
+/*** Third Solution ***/ 
+const reverseInt = (n) => {
+    let reversed = '';
+    for(let num of n.toString()) reversed = num + reversed;
+    return parseInt(reversed) * Math.sign(n);
+}
+
+
 reverseInt(-90);
