@@ -31,4 +31,13 @@ const vowels = (str) => {
     return counter;
 }
 
+/*** Third Solution ***/ 
+const vowels = (str) => {
+    // str.match(/[aeiou]/gi) returns an array containing all matches
+    // ... example: [ 'o', 'o', 'u', 'a' ]
+    // IF there are no matches, it returns null
+    const matches = str.match(/[aeiou]/gi);
+    return matches ? matches.length : 0;
+}
+
 vowels('Why do you ask?');
