@@ -46,7 +46,8 @@ const pyramid = (n) => {
 	for(let row = 0; row < n; row++) {
 		let lvl = '#';
 		for(let column = 0; column < n - 1; column++) {
-            (row > column) ? lvl = '#' + lvl + '#' : lvl = ' ' + lvl + ' ';
+            //(row > column) ? lvl = '#' + lvl + '#' : lvl = ' ' + lvl + ' ';
+            (row > column) ? lvl = `#${lvl}#` : lvl = ` ${lvl} `;
 		}
 		console.log(lvl);
 	}
