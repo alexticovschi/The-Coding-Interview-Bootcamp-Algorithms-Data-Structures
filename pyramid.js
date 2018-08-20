@@ -20,8 +20,10 @@
 // #    Add a '#' to 'level'
 // #  ELSE
 // #    Add a space to 'level'
-// #5 Console log 'stair'
+// #5 Console log 'level'
 
+
+/*** First Solution ***/
 const pyramid = (n) => {
     const midpoint = Math.floor((2 * n - 1) / 2);
 
@@ -37,5 +39,19 @@ const pyramid = (n) => {
         console.log(level);
     }
 }
+
+
+/*** Second Solution ***/
+const pyramid = (n) => {
+	for(let row = 0; row < n; row++) {
+		let lvl = '#';
+		for(let column = 0; column < n - 1; column++) {
+            (row > column) ? lvl = '#' + lvl + '#' : lvl = ' ' + lvl + ' ';
+		}
+		console.log(lvl);
+	}
+
+}
+
 
 pyramid(3);
